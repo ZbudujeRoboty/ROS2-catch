@@ -33,4 +33,4 @@ It also uses Docker and Docker-compose.
 
 ## Main steps:
 First you need to pull Docker ROS2 image: 
-`docker pull osrf/ros2:<tag_name>`
+`docker pull osrf/ros:foxy-desktop`
