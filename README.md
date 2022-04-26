@@ -32,5 +32,6 @@ It also uses Docker and Docker-compose.
 4. to verify: `docker-compose --version`
 
 ## Main steps:
-First you need to pull Docker ROS2 image: 
+First you need to pull Docker ROS2 image 
 `docker pull osrf/ros:foxy-desktop`
+which is from > https://hub.docker.com/r/osrf/ros/
