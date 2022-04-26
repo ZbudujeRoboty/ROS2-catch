@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  gazebo:
+    image: osrf/ros:foxy-desktop
+    command: export TURTLEBOT3_MODEL=burger ; ros2 launch turtlebot3_gazebo empty_world.launch.py
+  spawner:
+    image: osrf/ros:foxy-desktop
+    command: ros2 run husarion-mini-project turtlebot3_spawner
+    depends_on:
+      - gazebo
+  controller:
+    image: osrf/ros:foxy-desktop
+    command: ros2 run husarion-mini-project turtlebot3_controller
+    depends_on:
+      - spawner
