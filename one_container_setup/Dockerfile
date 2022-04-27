@@ -1,6 +1,6 @@
 FROM osrf/ros:foxy-desktop
 
-SHELL ["/bin/bach", "-c"]
+SHELL ["/bin/bash", "-c"]
 
 WORKDIR /app
 
