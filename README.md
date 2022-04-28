@@ -32,6 +32,6 @@ It also uses Docker and Docker-compose.
 4. to verify: `docker-compose --version`
 
 ## Main steps:
-`xhost local:root`
-Go to /ROS2-catch/compose_setup/
+Go to /ROS2-catch/compose_setup/ \
+`xhost local:root` \
 `docker-compose up --build`
