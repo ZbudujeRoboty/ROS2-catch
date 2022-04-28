@@ -2,8 +2,12 @@ version: '2'
 
 services:
   gazebo:
+    build:
+      context: ../
+      dockerfile: compose_setup/gazebo/Dockerfile
+    #image: gazebo
     #image: osrf/ros:foxy-desktop
-    image: osrf/ros2:nightly
+    #image: osrf/ros2:nightly
     environment:
       - DISPLAY
     volumes:
@@ -13,6 +17,6 @@ services:
     build:
       context: ../
       dockerfile: compose_setup/Dockerfile
-    command: ros2 run husarion-mini-project turtlebot3_spawner && ros2 run husarion-mini-project turtlebot3_controller
+    command: ros2 run husarion_mini_project turtlebot3_spawner && ros2 run husarion-mini-project turtlebot3_controller
     depends_on:
       - gazebo
