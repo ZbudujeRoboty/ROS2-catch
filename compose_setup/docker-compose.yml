@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  gazebo:
+    image: gazebo
+    environment:
+      - DISPLAY
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    command: export TURTLEBOT3_MODEL=burger && ros2 launch turtlebot3_gazebo empty_world.launch.py
+  own_nodes:
+    build:
+      context: ../
+      dockerfile: compose_setup/Dockerfile
+    command: ros2 run husarion-mini-project turtlebot3_spawner && ros2 run husarion-mini-project turtlebot3_controller
+    depends_on:
+      - gazebo
