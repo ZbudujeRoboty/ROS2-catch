@@ -2,10 +2,10 @@ version: '2'
 
 services:
   gazebo:
-    build:
-      context: ../
-      dockerfile: compose_setup/gazebo/Dockerfile
-    #image: gazebo
+    #build:
+    #  context: ../
+    #  dockerfile: compose_setup/gazebo/Dockerfile
+    image: gazebo
     #image: osrf/ros:foxy-desktop
     #image: osrf/ros2:nightly
     environment:

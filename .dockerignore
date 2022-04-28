@@ -1,3 +1,4 @@
 .dockerignore
 .gitignore
 README.md
+/compose_setup/gazebo/Dockerfile

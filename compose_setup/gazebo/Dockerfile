@@ -11,8 +11,8 @@ RUN cd ros2_ws && \
 
 #CMD ["gzserver", "my-gazebo-app-args"]
 
-COPY gzserver_entrypoint.sh /
+#COPY gzserver_entrypoint.sh /
 
-ENTRYPOINT [ "/gzserver_entrypoint.sh" ]
+#ENTRYPOINT [ "/gzserver_entrypoint.sh" ]
 
 CMD [ "bash" ]
