@@ -1,4 +1,5 @@
-FROM osrf/ros:foxy-desktop
+#FROM osrf/ros:foxy-desktop
+FROM osrf/ros2:nightly
 
 SHELL ["/bin/bash", "-c"]
 

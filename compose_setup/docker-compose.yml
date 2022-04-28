@@ -2,7 +2,8 @@ version: '2'
 
 services:
   gazebo:
-    image: gazebo
+    #image: osrf/ros:foxy-desktop
+    image: osrf/ros2:nightly
     environment:
       - DISPLAY
     volumes:
