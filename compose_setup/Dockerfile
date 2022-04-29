@@ -13,14 +13,16 @@ RUN sudo apt update && \
     #rosdep update && \
     #rosdep install --from-paths src --ignore-src --rosdistro foxy -y %% \
     sudo apt install -y ros-foxy-gazebo-ros-pkgs ros-foxy-gazebo-msgs ros-foxy-turtlebot3-msgs ros-foxy-dynamixel-sdk ros-foxy-hls-lfcd-lds-driver && \
-    mkdir -p ~/app/turtlebot3_ws/src && \
-    cd ~/app/turtlebot3_ws/src && \
+    mkdir -p /turtlebot3_ws/src && \
+    cd /turtlebot3_ws/src && \
     git clone -b foxy-devel https://github.com/ROBOTIS-GIT/turtlebot3 && \
     git clone -b foxy-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations && \
-    cd ~/app/turtlebot3_ws && \
+    cd .. && \
     colcon build && \
-    cd ~/app/ros2_ws && \
-    colcon build
+    cd .. && \
+    cd ros2_ws && \
+    colcon build && \
+    source /opt/ros/foxy/setup.bash
 
 COPY compose_setup/ros_entrypoint.sh /
 
